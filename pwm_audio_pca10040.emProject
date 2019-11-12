@@ -16,7 +16,7 @@
       arm_target_device_name="nRF52832_xxAA"
       arm_target_interface_type="SWD"
       c_preprocessor_definitions="BOARD_PCA10040;CONFIG_GPIO_AS_PINRESET;FLOAT_ABI_HARD;INITIALIZE_USER_SECTIONS;NO_VTOR_CONFIG;NRF52;NRF52832_XXAA;NRF52_PAN_74;SWI_DISABLE0;"
-      c_user_include_directories="Modules;Modules/pca10040;nRF5_SDK_v15_3/components;nRF5_SDK_v15_3/components/boards;nRF5_SDK_v15_3/components/drivers_nrf/nrf_soc_nosd;nRF5_SDK_v15_3/components/libraries/atomic;nRF5_SDK_v15_3/components/libraries/balloc;nRF5_SDK_v15_3/components/libraries/bsp;nRF5_SDK_v15_3/components/libraries/button;nRF5_SDK_v15_3/components/libraries/delay;nRF5_SDK_v15_3/components/libraries/experimental_section_vars;nRF5_SDK_v15_3/components/libraries/log;nRF5_SDK_v15_3/components/libraries/log/src;nRF5_SDK_v15_3/components/libraries/memobj;nRF5_SDK_v15_3/components/libraries/ringbuf;nRF5_SDK_v15_3/components/libraries/scheduler;nRF5_SDK_v15_3/components/libraries/strerror;nRF5_SDK_v15_3/components/libraries/timer;nRF5_SDK_v15_3/components/libraries/util;nRF5_SDK_v15_3/components/libraries/block_dev;nRF5_SDK_v15_3/components/libraries/block_dev/sdc;nRF5_SDK_v15_3/components/libraries/sdcard;nRF5_SDK_v15_3/components/toolchain/cmsis/include;../../..;nRF5_SDK_v15_3/external/fprintf;nRF5_SDK_v15_3/external/segger_rtt;nRF5_SDK_v15_3/external/fatfs/src;nRF5_SDK_v15_3/external/fatfs/port;nRF5_SDK_v15_3/integration/nrfx;nRF5_SDK_v15_3/integration/nrfx/legacy;nRF5_SDK_v15_3/modules/nrfx;nRF5_SDK_v15_3/modules/nrfx/drivers/include;nRF5_SDK_v15_3/modules/nrfx/hal;nRF5_SDK_v15_3/modules/nrfx/mdk"
+      c_user_include_directories="Modules;Modules/pca10040;nRF5_SDK_v15_3/components;nRF5_SDK_v15_3/components/boards;nRF5_SDK_v15_3/components/drivers_nrf/nrf_soc_nosd;nRF5_SDK_v15_3/components/libraries/atomic;nRF5_SDK_v15_3/components/libraries/balloc;nRF5_SDK_v15_3/components/libraries/bsp;nRF5_SDK_v15_3/components/libraries/button;nRF5_SDK_v15_3/components/libraries/delay;nRF5_SDK_v15_3/components/libraries/experimental_section_vars;nRF5_SDK_v15_3/components/libraries/log;nRF5_SDK_v15_3/components/libraries/log/src;nRF5_SDK_v15_3/components/libraries/memobj;nRF5_SDK_v15_3/components/libraries/ringbuf;nRF5_SDK_v15_3/components/libraries/scheduler;nRF5_SDK_v15_3/components/libraries/strerror;nRF5_SDK_v15_3/components/libraries/timer;nRF5_SDK_v15_3/components/libraries/util;nRF5_SDK_v15_3/components/libraries/block_dev;nRF5_SDK_v15_3/components/libraries/block_dev/sdc;nRF5_SDK_v15_3/components/libraries/sdcard;nRF5_SDK_v15_3/components/toolchain/cmsis/include;../../..;nRF5_SDK_v15_3/external/fprintf;nRF5_SDK_v15_3/external/segger_rtt;nRF5_SDK_v15_3/external/fatfs/src;nRF5_SDK_v15_3/external/fatfs/port;nRF5_SDK_v15_3/external/protothreads;nRF5_SDK_v15_3/external/protothreads/pt-1.4;nRF5_SDK_v15_3/integration/nrfx;nRF5_SDK_v15_3/integration/nrfx/legacy;nRF5_SDK_v15_3/modules/nrfx;nRF5_SDK_v15_3/modules/nrfx/drivers/include;nRF5_SDK_v15_3/modules/nrfx/hal;nRF5_SDK_v15_3/modules/nrfx/mdk"
       debug_register_definition_file="nRF5_SDK_v15_3/modules/nrfx/mdk/nrf52.svd"
       debug_start_from_entry_point_symbol="No"
       debug_target_connection="J-Link"
@@ -54,13 +54,18 @@
         <file file_name="nRF5_SDK_v15_3/components/libraries/util/app_util_platform.c" />
         <file file_name="nRF5_SDK_v15_3/components/libraries/util/nrf_assert.c" />
         <file file_name="nRF5_SDK_v15_3/components/libraries/block_dev/sdc/nrf_block_dev_sdc.c" />
+        <file file_name="nRF5_SDK_v15_3/components/libraries/sdcard/app_sdcard.c" />
         <file file_name="nRF5_SDK_v15_3/external/fprintf/nrf_fprintf.c" />
       </folder>
       <folder Name="nRF_Drivers">
+        <file file_name="nRF5_SDK_v15_3/integration/nrfx/legacy/nrf_drv_spi.c" />
         <file file_name="nRF5_SDK_v15_3/integration/nrfx/legacy/nrf_drv_clock.c" />
         <file file_name="nRF5_SDK_v15_3/modules/nrfx/drivers/src/nrfx_clock.c" />
         <file file_name="nRF5_SDK_v15_3/modules/nrfx/drivers/src/nrfx_gpiote.c" />
         <file file_name="nRF5_SDK_v15_3/modules/nrfx/drivers/src/nrfx_pwm.c" />
+        <file file_name="nRF5_SDK_v15_3/modules/nrfx/drivers/src/nrfx_spim.c" />
+        <file file_name="nRF5_SDK_v15_3/modules/nrfx/drivers/src/nrfx_spi.c" />
+        <file file_name="nRF5_SDK_v15_3/modules/nrfx/drivers/src/prs/nrfx_prs.c" />
       </folder>
       <folder Name="FATFS">
         <file file_name="nRF5_SDK_v15_3/external/fatfs/port/diskio_blkdev.c" />

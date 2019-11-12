@@ -83,6 +83,11 @@
 #include "nrf_block_dev_sdc.h"
 
 
+#include "nrf_log.h"
+#include "nrf_log_ctrl.h"
+#include "nrf_log_default_backends.h"
+
+
 
 // -------------------------------------------------------------------------------------------------------------------
 #define SDC_SCK_PIN     ARDUINO_13_PIN  ///< SDC serial clock (SCK) pin.
@@ -260,7 +265,7 @@ int main(void)
   // SD Card
 
 
-  //fatfs_example();
+  fatfs_example();
 
 
 
